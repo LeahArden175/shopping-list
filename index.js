@@ -7,7 +7,9 @@ function addItem (){
         //create newItem
         const newItem = $(this).find('#shopping-list-entry').val();
             //add newItem to li
+            if (newItem !== ""){
            $('.shopping-list').append(`<li><span class="shopping-item">${newItem}</span><div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button><button class="shopping-item-delete"><span class="button-label">delete</span></button></div></li>`);
+            }
         });
         //When check button is pressed put line through word
     $('.shopping-list').on('click', ".shopping-item-toggle", function(event){
